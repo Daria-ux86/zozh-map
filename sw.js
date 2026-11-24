@@ -15,7 +15,7 @@ const ASSETS = [
     './consultation.webp'
 ];
 
-// Установка: сохраняем файлы в кэш
+
 self.addEventListener('install', e => {
     e.waitUntil(
         caches.open(CACHE_NAME)
@@ -24,7 +24,7 @@ self.addEventListener('install', e => {
     );
 });
 
-// Активация: удаляем старые версии кэша
+
 self.addEventListener('activate', e => {
     e.waitUntil(
         caches.keys().then(keys =>
@@ -33,7 +33,6 @@ self.addEventListener('activate', e => {
     );
 });
 
-// Перехват запросов: отдаём из кэша, если есть, иначе загружаем из сети
 self.addEventListener('fetch', e => {
     if (e.request.method !== 'GET') return;
     e.respondWith(
