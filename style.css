@@ -1007,8 +1007,10 @@ section {
 
 .modal__content img {
     width: 100%;
-    aspect-ratio: 16/9;
+    max-height: 240px;        
+    aspect-ratio: 16 / 9;
     object-fit: cover;
+    object-position: center;  
     border-radius: 16px;
     margin-bottom: 1.4rem;
     background-color: var(--sand);
@@ -1059,9 +1061,10 @@ section {
 }
 
 @media (max-width: 767px) {
-    .trail {
-        gap: 2.6rem;
+    .modal__content img {
+        max-height: 180px;
     }
+}
 
     .trail__line {
         left: 23px;
