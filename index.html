@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Карта здоровья — интерактивный путь к здоровому образу жизни для всей семьи.">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' https://images.unsplash.com data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+
+    <title>Карта здоровья — тропинка к балансу</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="img/forest.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav" aria-label="Главная навигация">
+            <a href="#hero" class="logo">
+                <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M12 21C7 16.5 3 13 3 8.8 3 6 5.2 4 7.8 4c1.7 0 3.2.9 4.2 2.3C13 4.9 14.5 4 16.2 4 18.8 4 21 6 21 8.8c0 4.2-4 7.7-9 12.2z"
+                        fill="currentColor" />
+                </svg>
+                Карта здоровья
+            </a>
+            <ul class="nav__list">
+                <li><a href="#path">Тропинка</a></li>
+                <li><a href="#test">Тест</a></li>
+                <li><a href="#calculator">Калькулятор</a></li>
+                <li><a href="#tracker">Привычки</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero__photo">
+                <img src="img/forest.webp" alt="Солнечная лесная тропа" class="hero__img" fetchpriority="high"
+                    decoding="async" width="1920" height="1080">
+            </div>
+            <div class="hero__content">
+                <p class="hero__handwritten">начни с маленького шага</p>
+                <h1>Твоя тропинка<br>к здоровью</h1>
+                <p class="hero__lead">Пять станций, простой тест и трекер привычек. Всё, чтобы чувствовать себя лучше.
+                </p>
+                <a href="#path" class="btn btn--primary">Пройти тропинку</a>
+            </div>
+        </section>
+
+        <section id="path" class="path-section">
+            <h2 class="section-title">Тропинка к здоровью</h2>
+            <p class="section-subtitle">Нажимай на станции — каждая откроет секрет хорошего самочувствия</p>
+            <div class="trail">
+                <svg class="trail__line" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
+                    <path class="trail__path"
+                        d="M50 0 C30 80 70 160 50 240 C30 320 70 400 50 480 C30 560 70 640 50 720 C30 800 70 880 50 960 L50 1000"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6"
+                        stroke-linecap="round" />
+                </svg>
+
+                <article class="stop stop--left" data-stop="sleep">
+                    <div class="stop__marker">1</div>
+                    <div class="stop__card">
+                        <img src="img/bedroom.webp" alt="Уютная спальня" loading="lazy" decoding="async" width="800"
+                            height="600">
+                        <div class="stop__body">
+                            <h3>Сон</h3>
+                            <p>Ночь — это перезагрузка. 7–9 часов сна восстанавливают память и иммунитет.</p>
+                            <span class="stop__hint">Узнать больше</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="stop stop--right" data-stop="water">
+                    <div class="stop__marker">2</div>
+                    <div class="stop__card">
+                        <img src="img/water.webp" alt="Стакан чистой воды" loading="lazy" decoding="async" width="800"
+                            height="600">
+                        <div class="stop__body">
+                            <h3>Вода</h3>
+                            <p>Тело на 60% состоит из воды. Стакан утром запускает день, а 8 стаканов — всё тело.</p>
+                            <span class="stop__hint">Узнать больше</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="stop stop--left" data-stop="food">
+                    <div class="stop__marker">3</div>
+                    <div class="stop__card">
+                        <img src="img/food.webp" alt="Яркая тарелка с овощами" loading="lazy" decoding="async"
+                            width="800" height="600">
+                        <div class="stop__body">
+                            <h3>Еда</h3>
+                            <p>Разноцветная тарелка — это витамины. Овощи, фрукты, крупы и немного радости.</p>
+                            <span class="stop__hint">Узнать больше</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="stop stop--right" data-stop="move">
+                    <div class="stop__marker">4</div>
+                    <div class="stop__card">
+                        <img src="img/running.webp" alt="Девушка бежит по парку" loading="lazy" decoding="async"
+                            width="800" height="600">
+                        <div class="stop__body">
+                            <h3>Движение</h3>
+                            <p>30 минут в день — и сердце скажет спасибо. Ходьба, танцы, велосипед.</p>
+                            <span class="stop__hint">Узнать больше</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="stop stop--left" data-stop="mind">
+                    <div class="stop__marker">5</div>
+                    <div class="stop__card">
+                        <img src="img/meditation.webp" alt="Спокойная медитация на природе" loading="lazy"
+                            decoding="async" width="800" height="600">
+                        <div class="stop__body">
+                            <h3>Спокойствие</h3>
+                            <p>Пять минут тишины снижают тревогу лучше, чем час паники. Дыши.</p>
+                            <span class="stop__hint">Узнать больше</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="test" class="test-section">
+            <div class="test-section__bg">
+                <img src="img/mountain.webp" alt="Горная вершина в тумане" loading="lazy" decoding="async" width="1920"
+                    height="1080">
+            </div>
+            <div class="test-card">
+                <h2 class="section-title">На каком ты этапе?</h2>
+                <p class="section-subtitle">Пять вопросов — и ты узнаешь, где сейчас на тропинке</p>
+                <div class="quiz" id="quiz">
+                    <div class="quiz__progress">
+                        <div class="quiz__bar" id="quiz-bar"></div>
+                    </div>
+                    <div class="quiz__screen" id="quiz-screen"></div>
+                    <div class="quiz__result" id="quiz-result" hidden></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="calc-section">
+            <h2 class="section-title">Калькулятор самочувствия</h2>
+            <p class="section-subtitle">Двигай ползунки — кружок покажет твой уровень прямо сейчас</p>
+            <div class="calc-layout">
+                <div class="calc-photo">
+                    <img src="img/consultation.webp" alt="Показатели здоровья" loading="lazy" decoding="async"
+                        width="800" height="600">
+                </div>
+                <div class="calc-sliders">
+                    <div class="slider-group">
+                        <label for="sleep-range">Сон за ночь: <b id="sleep-val">7</b> ч</label>
+                        <input type="range" id="sleep-range" min="0" max="12" value="7" step="0.5">
+                    </div>
+                    <div class="slider-group">
+                        <label for="water-range">Вода сегодня: <b id="water-val">4</b> стаканов</label>
+                        <input type="range" id="water-range" min="0" max="10" value="4">
+                    </div>
+                    <div class="slider-group">
+                        <label for="steps-range">Шаги сегодня: <b id="steps-val">5000</b></label>
+                        <input type="range" id="steps-range" min="0" max="15000" value="5000" step="500">
+                    </div>
+                    <div class="slider-group">
+                        <label for="mood-range">Настроение: <b id="mood-val">6</b> из 10</label>
+                        <input type="range" id="mood-range" min="1" max="10" value="6">
+                    </div>
+                </div>
+                <div class="calc-dial" id="calc-dial">
+                    <svg viewBox="0 0 200 200" aria-hidden="true">
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="#e8e0d2" stroke-width="12" />
+                        <circle id="dial-arc" cx="100" cy="100" r="90" fill="none" stroke="#3d6b4a" stroke-width="12"
+                            stroke-linecap="round" stroke-dasharray="565" stroke-dashoffset="282"
+                            transform="rotate(-90 100 100)" />
+                    </svg>
+                    <div class="calc-dial__center">
+                        <span id="dial-score">50</span>
+                        <small id="dial-label">средне</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tracker" class="tracker-section">
+            <div class="tracker-section__bg">
+                <img src="img/running.webp" alt="Активность на природе" loading="lazy" decoding="async" width="1920"
+                    height="1080">
+            </div>
+            <div class="tracker-content">
+                <h2 class="section-title">Привычки на сегодня</h2>
+                <p class="section-subtitle">Отмечай выполненное — серия не прервётся</p>
+                <div class="tracker-progress">
+                    <div class="tracker-progress__bar" id="tracker-bar"></div>
+                    <span class="tracker-progress__text" id="tracker-text">0 из 5</span>
+                </div>
+                <div class="checklist" id="checklist">
+                    <label class="check-item">
+                        <input type="checkbox" data-habit="water">
+                        <span class="check-item__icon" aria-hidden="true"></span>
+                        <span class="check-item__box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 12l5 5L20 6" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="check-item__text">Выпить 8 стаканов воды</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" data-habit="walk">
+                        <span class="check-item__icon" aria-hidden="true"></span>
+                        <span class="check-item__box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 12l5 5L20 6" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="check-item__text">Пройти 8000 шагов</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" data-habit="sleep">
+                        <span class="check-item__icon" aria-hidden="true"></span>
+                        <span class="check-item__box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 12l5 5L20 6" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="check-item__text">Лечь спать до 23:00</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" data-habit="veg">
+                        <span class="check-item__icon" aria-hidden="true"></span>
+                        <span class="check-item__box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 12l5 5L20 6" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="check-item__text">Съесть овощи или фрукты</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" data-habit="calm">
+                        <span class="check-item__icon" aria-hidden="true"></span>
+                        <span class="check-item__box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 12l5 5L20 6" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="check-item__text">10 минут спокойного дыхания</span>
+                    </label>
+                </div>
+                <p class="streak" id="streak" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section class="tip-section">
+            <div class="tip-card">
+                <svg class="tip-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"
+                        fill="currentColor" />
+                </svg>
+                <p class="tip-card__handwritten">маленькая подсказка</p>
+                <p id="tip-text" aria-live="polite">Нажми кнопку — и получи совет, который работает уже сегодня.</p>
+                <button class="btn btn--primary tip-btn" id="tip-btn">
+                    <span>Дать совет</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть окно">
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+            </button>
+            <img id="modal-img" alt="" width="800" height="450" decoding="async">
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+            <ul id="modal-tips" class="modal__tips"></ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Карта здоровья, 2026. Данные хранятся только в твоём браузере.</p>
+        <p><a href="privacy.html">Политика конфиденциальности</a></p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
